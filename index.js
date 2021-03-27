@@ -165,9 +165,6 @@ let computer;
 function game(user, computer){
   computer = Math.round(Math.random() * 2);
   let result;
-  let win = 'you win!';
-  let lose = 'you lose!';
-  let tie = 'it\'s a tie';
   let computerChoice;
   if(computer === 0){
     computerChoice = 'rock';
@@ -178,23 +175,23 @@ function game(user, computer){
   }
 
   if(user === 'rock' && computerChoice === 'rock'){
-    result = tie;
+    result = 'it\'s a tie';
   }else if(user === 'rock' && computerChoice === 'scissors'){
-    result = win;
+    result = 'you win!';
   }else if(user === 'rock' && computerChoice === 'paper'){
-    result = lose;
+    result = 'you lose!';
   }else if(user === 'scissors' && computerChoice === 'scissors'){
-    result = tie;
+    result = 'it\'s a tie';
   }else if(user === 'scissors' && computerChoice === 'paper'){
-    result = win;
+    result = 'you win!';
   }else if(user === 'scissors' && computerChoice === 'rock'){
-    result = lose;
+    result = 'you lose!';
   }else if(user === 'paper' && computerChoice === 'paper'){
-    result = tie;
+    result = 'it\'s a tie';
   }else if(user === 'paper' && computerChoice === 'rock'){
-    result = win;
+    result = 'you win!';
   }else if(user === 'paper' && computerChoice === 'scissors'){
-    result = lose;
+    result = 'you lose!';
   }
   return result;
 }
